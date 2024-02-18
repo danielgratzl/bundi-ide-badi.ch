@@ -1,0 +1,29 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+nav, h3 {
+  font-family: 'Borel', serif !important;
+}
+
+.bg-dark {
+  background-color: #0091D9 !important;
+}
+
+.card {
+  padding-top: 10px;
+  background-color: rgb(255, 255, 255, 0.3);
+  color: white;
+}
+
+.text-body-secondary {
+  color: #ccc !important;
+}
+
+body {
+  background-color: #0091D9;
+}
