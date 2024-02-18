@@ -14,7 +14,7 @@
 
 <header>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Bundi ide Badi</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#about">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#locations">locations</a>
+                        <a class="nav-link"  href="#locations">locations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#prices">prices</a>
@@ -46,11 +46,12 @@
     <div class="container">
 
         <!-- Heading Row-->
-        <div class="row gx-4 gx-lg-5 align-items-center my-5 text-white">
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/about.gif" alt="..."/>
+        <div   id="about" class="row gx-4 gx-lg-5 align-items-center my-5 text-white">
+            <div class="col-lg-7">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/about.gif" alt="..."/>
             </div>
             <div class="col-lg-5">
-                <h3 id="about" class="font-weight-light">about me</h3>
+                <h3 class="font-weight-light">about me</h3>
                 <p>Hi, I'm Tina Bundi and I have been a swimming teacher for several years. I can teach all levels. I
                     speak english, german and spanish and teach in those languages.</p>
             </div>
@@ -65,26 +66,32 @@
 
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-4 mb-5">
-                <div class="card h-100">
+                <div id="locations" class="card h-100">
                     <div class="card-body">
-                        <h3 id="locations" class="card-title">locations</h3>
-                        <p class="card-text"><strong>Hallenbad Schweigkrüti</strong>
+                        <h3 class="card-title">locations</h3>
+                        <p class="card-text"><strong>Hallenbad Schweikrüti</strong>
                             <br>
                             Obstgartenweg 2
                             <br>
                             8136 Thalwil/Gattikon
+                            <br><br>
+                            Fridays, between 11:40 - 14:10.
                         </p>
+                        <hr>
                         <p class="card-text">During summer (May - September) I also teach at <strong>Freibad
-                            Letzigraben</strong> in Zurich.</p>
+                            Letzigraben</strong> in Zurich.
+                            <br><br>
+                            Fridays, morning or afternoon.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-5">
-                <div class="card h-100">
+                <div id="prices" class="card h-100">
                     <div class="card-body">
-                        <h3 id="prices" class="card-title">prices</h3>
+                        <h3  class="card-title">prices</h3>
                         <p class="card-text"><strong>Individual lesson</strong><br>CHF 60 / 30 minutes</p>
-                        <p class="card-text"><strong>Group lesson (max. 2 people)</strong><br>CHF 60 / 30 minutes</p>
+                        <p class="card-text"><strong>Group lesson (max. 2 people)</strong><br>CHF 80 / 30 minutes</p>
                     </div>
                 </div>
             </div>
@@ -107,6 +114,11 @@
     </div>
 </footer>
 <script src="./js/bootstrap.bundle.min.js"></script>
-
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script type="application/javascript">
+    $('.navbar-nav>li>a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+</script>
 </body>
 </html>
