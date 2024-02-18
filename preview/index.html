@@ -14,7 +14,7 @@
 
 <header>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Bundi ide Badi</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -46,11 +46,11 @@
     <div class="container">
 
         <!-- Heading Row-->
-        <div   id="about" class="row gx-4 gx-lg-5 align-items-center my-5 text-white">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5 text-white">
             <div class="col-lg-7">
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="./assets/about.gif" alt="..."/>
             </div>
-            <div class="col-lg-5">
+            <div id="about" class="col-lg-5">
                 <h3 class="font-weight-light">about me</h3>
                 <p>Hi, I'm Tina Bundi and I have been a swimming teacher for several years. I can teach all levels. I
                     speak english, german and spanish and teach in those languages.</p>
@@ -118,6 +118,11 @@
 <script type="application/javascript">
     $('.navbar-nav>li>a').on('click', function() {
         $('.navbar-collapse').collapse('hide');
+        divId = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(divId).offset().top - 75
+        }, 100);
+
     });
 </script>
 </body>
